@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" class="ng-cloak" ng-app="quoteApp">
+<head>
+<meta charset="UTF-8">
+<title>Quote App</title>
+<!-- bower:css -->
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+<link rel="stylesheet" href="bower_components/animate.css/animate.css" />
+<link rel="stylesheet" href="bower_components/hover/css/hover.css" />
+<!-- endbower -->
+<!-- inject:css -->
+<link rel="stylesheet" href="/app/styles/styles.css">
+<!-- endinject -->
+</head>
+
+<body ng-controller="quoteController as vm">
+
+	<!-- box that displays results -->
+	<div class="col-xs-12 image">
+		<table>
+	        <img ng-src="/app/jeffwinkling.jpg" ng-show="pic" class="col-xs-12 animated fadeInRight">
+				<tr ng-repeat="x in vm.getQuote" class="info">
+					<td id="style">
+						<span>{{x.quote}}<form>
+							<input class="btn btn-primary" type="button" onClick="history.go(0)" value="Re-Quack" id="requack"/></form>
+						</span>
+					</td>
+				</tr>
+		</table>
+	</div>
+
+	<!-- container for ui -->
+	<div class="container col-xs-6 col-xs-offset-3" img="/app/jokeduck.jpg">
+		<div id="content">
+			<div class="panel panel-danger">
+				<div id="box">
+					<div class="panel-heading" id="heading">
+						<h1 ng-hide="title" class="animated zoomIn">Origin Duck</h1>
+						</div>
+							<form ng-hide="button" class="form-inline">
+
+						<!-- 	Joke quack button -->
+						<div id="quoteButtons">
+							<div class="form-group" id="quoteButton">
+								<script>
+									function play(){
+						    		var audio = document.getElementById("audio");
+						    		audio.play();}
+								</script>
+								<button class="btn btn-primary btn-lg hvr-float-shadow" ng-click="vm.submitQuote(); pic = !pic; button = !button; title = !title" onclick="play()"> Joke Quack! </button>
+								<audio id="audio" src="/../app/QuackQuack.mp3" ></audio>
+							</div>
+
+							<!-- Quote quack button -->
+							<div class="form-group" id="quoteButton">
+								<script>
+									function play(){
+								    var audio = document.getElementById("audio");
+								   	audio.play();}
+								</script>
+								<button class="btn btn-primary btn-lg hvr-float-shadow" ng-click="vm.submitMotivation(); pic = !pic; button = !button; title = !title" onclick=play()"> Quote Quack! </button>
+								<audio id="audio" src="/../app/QuackQuack.mp3" ></audio>
+							</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!-- bower:js -->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<!-- endbower -->
+
+<!-- inject:js -->
+<script src="/app/app.module.js"></script>
+<script src="/app/quote.controller.js"></script>
+<script src="/app/quote.factory.js"></script>
+<!-- endinject -->
+</body>
+<footer><p id="footer">Created by: John, Ben and John</p></footer>
+</html>

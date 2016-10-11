@@ -1,0 +1,83 @@
+html {
+
+	background-color: #64ABDD;
+}
+
+.ng-cloak {
+	display: none;
+}
+
+#box {
+	background: url(/../app/jokeduck.jpg);
+	background-position: center;
+	border-style: solid;
+	border-color: white;
+}
+
+#content {
+	margin-top: 15px;
+
+}
+
+#jeff {
+	border-style: solid;
+	border-color: white;
+}
+
+h1 {
+	font-family: Georgia;
+	text-align: center;
+	font-size: 6em;
+	margin-top: 35px;
+	margin-bottom: 45px;
+	color: white;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#heading {
+	margin-bottom: 100px;
+}
+
+#quoteButton {
+	margin-bottom: 35px;
+	margin-top: 210px;
+	text-align: center;
+}
+
+
+#style {
+	color: black;
+	font-size: 3em;
+	text-align: center;
+	position: top center;
+   	position: absolute; 
+  	top: 200px; 
+   	left: 0; 
+   	width: 40%; 
+   	float: left;
+   	margin-left: 50px;
+}
+
+#style span { 
+   	color: white; 
+   	font: bold 24px/45px Helvetica, Sans-Serif; 
+   	letter-spacing: -1px;  
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+   	padding: 10px; 
+}
+
+#quoteButtons {
+	text-align: center;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.btn-primary {
+	border: 0 none;
+	background:  #64ABDD;;
+}
+
+#footer {
+	text-align: center;
+	color: white;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
